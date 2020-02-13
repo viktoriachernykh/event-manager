@@ -2,14 +2,9 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
 export default class EventList extends Component {
-  // renderEvent(event) {
-  //   return (
-  //     <li key={event.id}>
-  //       <Link to={`/event/${event.id}`}>{event.name}</Link>
-  //     </li>
-  //   );
+  // componentDidMount() {
+  //   console.log("this from EventList componentDidMount", this);
   // }
-
   render() {
     return (
       <div>
@@ -18,7 +13,6 @@ export default class EventList extends Component {
         {this.props.events && (
           <div>
             <p>We have {this.props.events.length} events!</p>
-            {/* <ul>{this.props.events.map(this.renderEvent)}</ul> */}
             <ul>
               {this.props.events.map(event => (
                 <li key={event.id}>
@@ -32,23 +26,3 @@ export default class EventList extends Component {
     );
   }
 }
-
-// export default class DogsList extends Component {
-//   renderDogBreed(breed) {
-//     return (
-//       <li key={breed}>
-//         <Link to={`/dog-breeds/${breed}`}>{breed}</Link>
-//       </li>
-//     );
-//   }
-//   render() {
-//     const { dogBreeds } = this.props;
-//     return (
-//       <div className="dogs-list">
-//         <h1>Dogs List</h1>
-//         {!dogBreeds && "Loading..."}
-//         {dogBreeds && <ul>{dogBreeds.map(this.renderDogBreed)}</ul>}
-//       </div>
-//     );
-//   }
-// }

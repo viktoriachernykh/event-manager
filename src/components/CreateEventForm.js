@@ -1,11 +1,9 @@
 import React from "react";
 
 export default function CreateEventForm(props) {
-  // console.log("formpropds", props);
   return (
     <div>
-      <p>Add your own event:</p>
-      <form onSubmit={props.onSubmit}>
+      <form onSubmit={event => props.onSubmit(event)}>
         {/* <form onSubmit={event => props.onSubmit(event)}> */}
         Name:
         <input
@@ -35,7 +33,7 @@ export default function CreateEventForm(props) {
         {/* <button type="submit" value="Add event">
           Create event
         </button> */}
-        <input type="submit" value="Add event" />
+        <input type="submit" value="Save" />
       </form>
     </div>
   );

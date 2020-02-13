@@ -11,7 +11,6 @@ class CreateEventFormContainer extends React.Component {
   };
 
   onChange = event => {
-    // console.log(event.target.value);
     this.setState({
       [event.target.name]: event.target.value
     });
@@ -34,11 +33,14 @@ class CreateEventFormContainer extends React.Component {
 
   render() {
     return (
-      <CreateEventForm
-        onSubmit={this.onSubmit}
-        onChange={this.onChange}
-        values={this.state}
-      />
+      <div>
+        Add event:
+        <CreateEventForm
+          onSubmit={this.onSubmit}
+          onChange={this.onChange}
+          values={this.state}
+        />
+      </div>
     );
   }
 }
